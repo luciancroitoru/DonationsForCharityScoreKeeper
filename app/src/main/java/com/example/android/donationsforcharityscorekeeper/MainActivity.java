@@ -380,8 +380,7 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(message);
     }
 
-    //* Override the onSaveInstanceState method, this will write the variables values to the Bundle
-
+    // Override the onSaveInstanceState method, this will write the variables values to the Bundle
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState){
         super.onSaveInstanceState(savedInstanceState);
