@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Donations For Charity Game Counter</string>
+    <string name="TeamA">Green Team</string>
+    <string name="TeamB">Blue Team</string>
+    <string name="money_raised">Money Raised</string>
+    <string name="products_sold">Products Sold</string>
+    <string name="initial_value_money">€0</string>
+    <string name="initial_value_products">0</string>
+    <string name="product1">Water</string>
+    <string name="product2">Coffee</string>
+    <string name="product3">Lemonade</string>
+    <string name="product4">Biscuits</string>
+    <string name="product5">Super Sandwich</string>
+    <string name="reset_button">Reset score</string>
+    <string name="hide_button">X</string>
+    <string name="result">Score Status</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#9E9E9E</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#ECEFF1</color>
+    <color name="black">#000000</color>
+    <color name="TeamA">#2E7D32</color>
+    <color name="TeamB">#303F9F</color>
+    <color name="score_title_color">#616161</color>
+    <color name="buttons_TeamA">#C8E6C9</color>
+    <color name="buttons_TeamB">#BBDEFB</color>
+    <color name="reset_button">#9E9E9E</color>
+    <color name="color_win">#F44336</color>
+</resources>
