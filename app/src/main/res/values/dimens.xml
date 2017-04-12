@@ -20,4 +20,6 @@
     <dimen name="hide_button_height">48dp</dimen>
     <dimen name="hide_button_width">48dp</dimen>
     <dimen name="message_text_size">14sp</dimen>
+    <dimen name="last_team_button_landscape">70dp</dimen>
+    <dimen name="view_margin_landscape">70dp</dimen>
 </resources>

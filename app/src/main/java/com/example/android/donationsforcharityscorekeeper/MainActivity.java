@@ -28,11 +28,16 @@ public class MainActivity extends AppCompatActivity {
     // if showScoreStatus is odd, it displays the score; if it is even, it hides the score.
     int showScoreStatus = 0;
 
+    //keeps message to be displayed when Team A wins
+    String finalWinMessageTeamA = "Green Team\nwins\nthe game!";
+    //keeps message to be displayed when Team B wins
+    String finalWinMessageTeamB = "Blue Team\nwins\nthe game!";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (savedInstanceState !=null){
+        if (savedInstanceState != null) {
             moneyScoreTeamA = savedInstanceState.getInt(MONEY_SCORE_TEAM_A, 0);
             moneyScoreTeamB = savedInstanceState.getInt(MONEY_SCORE_TEAM_B, 0);
             productsScoreTeamA = savedInstanceState.getInt(PRODUCTS_SCORE_TEAM_A, 0);
@@ -50,19 +55,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 1 euro to TeamA and +1 product sold for TeamA
      */
     public void addOneForTeamA(View view) {
-        moneyScoreTeamA = moneyScoreTeamA + 1;
-        productsScoreTeamA = productsScoreTeamA + 1;
-        String moneyMessage = "€" + moneyScoreTeamA;
-        displayMoneyForTeamA(moneyMessage);
-        displayProductsForTeamA(productsScoreTeamA);
 
-        String winMessageTeamA = "Green Team\nwins\nthe game!";
-
-        if(moneyScoreTeamA >= 100) {
-            displayMoneyMessage(winMessageTeamA);
+        if (moneyScoreTeamA < 100 && productsScoreTeamA < 40 && moneyScoreTeamB < 100 && productsScoreTeamB < 40) {
+            moneyScoreTeamA = moneyScoreTeamA + 1;
+            productsScoreTeamA = productsScoreTeamA + 1;
+            String moneyMessage = "€" + moneyScoreTeamA;
+            displayMoneyForTeamA(moneyMessage);
+            displayProductsForTeamA(productsScoreTeamA);
         }
-        if (productsScoreTeamA >= 40){
-            displayProductsMessage(winMessageTeamA);
+        if (moneyScoreTeamA >= 100) {
+            displayMoneyMessage(finalWinMessageTeamA);
+        }
+        if (productsScoreTeamA >= 40) {
+            displayProductsMessage(finalWinMessageTeamA);
         }
     }
 
@@ -70,19 +75,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 2 euro to TeamA and +1 product sold for TeamA when pressing second button
      */
     public void addTwoForTeamAProduct2(View view) {
-        moneyScoreTeamA = moneyScoreTeamA + 2;
-        productsScoreTeamA = productsScoreTeamA + 1;
-        String moneyMessage = "€" + moneyScoreTeamA;
-        displayMoneyForTeamA(moneyMessage);
-        displayProductsForTeamA(productsScoreTeamA);
 
-        String winMessageTeamA = "Green Team\nwins\nthe game!";
-
-        if(moneyScoreTeamA >= 100) {
-            displayMoneyMessage(winMessageTeamA);
+        if (moneyScoreTeamA < 100 && productsScoreTeamA < 40 && moneyScoreTeamB < 100 && productsScoreTeamB < 40) {
+            moneyScoreTeamA = moneyScoreTeamA + 2;
+            productsScoreTeamA = productsScoreTeamA + 1;
+            String moneyMessage = "€" + moneyScoreTeamA;
+            displayMoneyForTeamA(moneyMessage);
+            displayProductsForTeamA(productsScoreTeamA);
         }
-        if (productsScoreTeamA >= 40){
-            displayProductsMessage(winMessageTeamA);
+        if (moneyScoreTeamA >= 100) {
+            displayMoneyMessage(finalWinMessageTeamA);
+        }
+        if (productsScoreTeamA >= 40) {
+            displayProductsMessage(finalWinMessageTeamA);
         }
     }
 
@@ -90,19 +95,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 2 euro to TeamA and +1 product sold for TeamA when pressing third button
      */
     public void addTwoForTeamAProduct3(View view) {
-        moneyScoreTeamA = moneyScoreTeamA + 2;
-        productsScoreTeamA = productsScoreTeamA + 1;
-        String moneyMessage = "€" + moneyScoreTeamA;
-        displayMoneyForTeamA(moneyMessage);
-        displayProductsForTeamA(productsScoreTeamA);
 
-        String winMessageTeamA = "Green Team\nwins\nthe game!";
-
-        if(moneyScoreTeamA >= 100) {
-            displayMoneyMessage(winMessageTeamA);
+        if (moneyScoreTeamA < 100 && productsScoreTeamA < 40 && moneyScoreTeamB < 100 && productsScoreTeamB < 40) {
+            moneyScoreTeamA = moneyScoreTeamA + 2;
+            productsScoreTeamA = productsScoreTeamA + 1;
+            String moneyMessage = "€" + moneyScoreTeamA;
+            displayMoneyForTeamA(moneyMessage);
+            displayProductsForTeamA(productsScoreTeamA);
         }
-        if (productsScoreTeamA >= 40){
-            displayProductsMessage(winMessageTeamA);
+        if (moneyScoreTeamA >= 100) {
+            displayMoneyMessage(finalWinMessageTeamA);
+        }
+        if (productsScoreTeamA >= 40) {
+            displayProductsMessage(finalWinMessageTeamA);
         }
     }
 
@@ -110,19 +115,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 3 euro to TeamA and +1 product sold for TeamA
      */
     public void addThreeForTeamA(View view) {
-        moneyScoreTeamA = moneyScoreTeamA + 3;
-        productsScoreTeamA = productsScoreTeamA + 1;
-        String moneyMessage = "€" + moneyScoreTeamA;
-        displayMoneyForTeamA(moneyMessage);
-        displayProductsForTeamA(productsScoreTeamA);
 
-        String winMessageTeamA = "Green Team\nwins\nthe game!";
-
-        if(moneyScoreTeamA >= 100) {
-            displayMoneyMessage(winMessageTeamA);
+        if (moneyScoreTeamA < 100 && productsScoreTeamA < 40 && moneyScoreTeamB < 100 && productsScoreTeamB < 40) {
+            moneyScoreTeamA = moneyScoreTeamA + 3;
+            productsScoreTeamA = productsScoreTeamA + 1;
+            String moneyMessage = "€" + moneyScoreTeamA;
+            displayMoneyForTeamA(moneyMessage);
+            displayProductsForTeamA(productsScoreTeamA);
         }
-        if (productsScoreTeamA >= 40){
-            displayProductsMessage(winMessageTeamA);
+        if (moneyScoreTeamA >= 100) {
+            displayMoneyMessage(finalWinMessageTeamA);
+        }
+        if (productsScoreTeamA >= 40) {
+            displayProductsMessage(finalWinMessageTeamA);
         }
     }
 
@@ -130,19 +135,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 5 euro to TeamA and +1 product sold for TeamA
      */
     public void addFiveForTeamA(View view) {
-        moneyScoreTeamA = moneyScoreTeamA + 5;
-        productsScoreTeamA = productsScoreTeamA + 1;
-        String moneyMessage = "€" + moneyScoreTeamA;
-        displayMoneyForTeamA(moneyMessage);
-        displayProductsForTeamA(productsScoreTeamA);
 
-        String winMessageTeamA = "Green Team\nwins\nthe game!";
-
-        if(moneyScoreTeamA >= 100) {
-            displayMoneyMessage(winMessageTeamA);
+        if (moneyScoreTeamA < 100 && productsScoreTeamA < 40 && moneyScoreTeamB < 100 && productsScoreTeamB < 40) {
+            moneyScoreTeamA = moneyScoreTeamA + 5;
+            productsScoreTeamA = productsScoreTeamA + 1;
+            String moneyMessage = "€" + moneyScoreTeamA;
+            displayMoneyForTeamA(moneyMessage);
+            displayProductsForTeamA(productsScoreTeamA);
         }
-        if (productsScoreTeamA >= 40){
-            displayProductsMessage(winMessageTeamA);
+        if (moneyScoreTeamA >= 100) {
+            displayMoneyMessage(finalWinMessageTeamA);
+        }
+        if (productsScoreTeamA >= 40) {
+            displayProductsMessage(finalWinMessageTeamA);
         }
     }
 
@@ -150,19 +155,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 1 euro to TeamB and +1 product sold for TeamB
      */
     public void addOneForTeamB(View view) {
-        moneyScoreTeamB = moneyScoreTeamB + 1;
-        productsScoreTeamB = productsScoreTeamB + 1;
-        String moneyMessage = "€" + moneyScoreTeamB;
-        displayMoneyForTeamB(moneyMessage);
-        displayProductsForTeamB(productsScoreTeamB);
 
-        String winMessageTeamB = "Blue Team\nwins\nthe game!";
-
-        if(moneyScoreTeamB >= 100) {
-            displayMoneyMessage(winMessageTeamB);
+        if (moneyScoreTeamB < 100 && productsScoreTeamB < 40 && moneyScoreTeamA < 100 && productsScoreTeamA < 40) {
+            moneyScoreTeamB = moneyScoreTeamB + 1;
+            productsScoreTeamB = productsScoreTeamB + 1;
+            String moneyMessage = "€" + moneyScoreTeamB;
+            displayMoneyForTeamB(moneyMessage);
+            displayProductsForTeamB(productsScoreTeamB);
         }
-        if (productsScoreTeamB >= 40){
-            displayProductsMessage(winMessageTeamB);
+        if (moneyScoreTeamB >= 100) {
+            displayMoneyMessage(finalWinMessageTeamB);
+        }
+        if (productsScoreTeamB >= 40) {
+            displayProductsMessage(finalWinMessageTeamB);
         }
     }
 
@@ -170,19 +175,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 2 euro to TeamB and +1 product sold for TeamB when pressing second button
      */
     public void addTwoForTeamBProduct2(View view) {
-        moneyScoreTeamB = moneyScoreTeamB + 2;
-        productsScoreTeamB = productsScoreTeamB + 1;
-        String moneyMessage = "€" + moneyScoreTeamB;
-        displayMoneyForTeamB(moneyMessage);
-        displayProductsForTeamB(productsScoreTeamB);
 
-        String winMessageTeamB = "Blue Team\nwins\nthe game!";
-
-        if(moneyScoreTeamB >= 100) {
-            displayMoneyMessage(winMessageTeamB);
+        if (moneyScoreTeamB < 100 && productsScoreTeamB < 40 && moneyScoreTeamA < 100 && productsScoreTeamA < 40) {
+            moneyScoreTeamB = moneyScoreTeamB + 2;
+            productsScoreTeamB = productsScoreTeamB + 1;
+            String moneyMessage = "€" + moneyScoreTeamB;
+            displayMoneyForTeamB(moneyMessage);
+            displayProductsForTeamB(productsScoreTeamB);
         }
-        if (productsScoreTeamB >= 40){
-            displayProductsMessage(winMessageTeamB);
+        if (moneyScoreTeamB >= 100) {
+            displayMoneyMessage(finalWinMessageTeamB);
+        }
+        if (productsScoreTeamB >= 40) {
+            displayProductsMessage(finalWinMessageTeamB);
         }
     }
 
@@ -190,19 +195,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 2 euro to TeamB and +1 product sold for TeamB when pressing third button
      */
     public void addTwoForTeamBProduct3(View view) {
-        moneyScoreTeamB = moneyScoreTeamB + 2;
-        productsScoreTeamB = productsScoreTeamB + 1;
-        String moneyMessage = "€" + moneyScoreTeamB;
-        displayMoneyForTeamB(moneyMessage);
-        displayProductsForTeamB(productsScoreTeamB);
 
-        String winMessageTeamB = "Blue Team\nwins\nthe game!";
-
-        if(moneyScoreTeamB >= 100) {
-            displayMoneyMessage(winMessageTeamB);
+        if (moneyScoreTeamB < 100 && productsScoreTeamB < 40 && moneyScoreTeamA < 100 && productsScoreTeamA < 40) {
+            moneyScoreTeamB = moneyScoreTeamB + 2;
+            productsScoreTeamB = productsScoreTeamB + 1;
+            String moneyMessage = "€" + moneyScoreTeamB;
+            displayMoneyForTeamB(moneyMessage);
+            displayProductsForTeamB(productsScoreTeamB);
         }
-        if (productsScoreTeamB >= 40){
-            displayProductsMessage(winMessageTeamB);
+        if (moneyScoreTeamB >= 100) {
+            displayMoneyMessage(finalWinMessageTeamB);
+        }
+        if (productsScoreTeamB >= 40) {
+            displayProductsMessage(finalWinMessageTeamB);
         }
     }
 
@@ -210,19 +215,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 3 euro to TeamB and +1 product sold for TeamB
      */
     public void addThreeForTeamB(View view) {
-        moneyScoreTeamB = moneyScoreTeamB + 3;
-        productsScoreTeamB = productsScoreTeamB + 1;
-        String moneyMessage = "€" + moneyScoreTeamB;
-        displayMoneyForTeamB(moneyMessage);
-        displayProductsForTeamB(productsScoreTeamB);
 
-        String winMessageTeamB = "Blue Team\nwins\nthe game!";
-
-        if(moneyScoreTeamB >= 100) {
-            displayMoneyMessage(winMessageTeamB);
+        if (moneyScoreTeamB < 100 && productsScoreTeamB < 40 && moneyScoreTeamA < 100 && productsScoreTeamA < 40) {
+            moneyScoreTeamB = moneyScoreTeamB + 3;
+            productsScoreTeamB = productsScoreTeamB + 1;
+            String moneyMessage = "€" + moneyScoreTeamB;
+            displayMoneyForTeamB(moneyMessage);
+            displayProductsForTeamB(productsScoreTeamB);
         }
-        if (productsScoreTeamB >= 40){
-            displayProductsMessage(winMessageTeamB);
+        if (moneyScoreTeamB >= 100) {
+            displayMoneyMessage(finalWinMessageTeamB);
+        }
+        if (productsScoreTeamB >= 40) {
+            displayProductsMessage(finalWinMessageTeamB);
         }
     }
 
@@ -230,19 +235,19 @@ public class MainActivity extends AppCompatActivity {
      * adds 5 euro to TeamB and +1 product sold for TeamB
      */
     public void addFiveForTeamB(View view) {
-        moneyScoreTeamB = moneyScoreTeamB + 5;
-        productsScoreTeamB = productsScoreTeamB + 1;
-        String moneyMessage = "€" + moneyScoreTeamB;
-        displayMoneyForTeamB(moneyMessage);
-        displayProductsForTeamB(productsScoreTeamB);
 
-        String winMessageTeamB = "Blue Team\nwins\nthe game!";
-
-        if(moneyScoreTeamB >= 100) {
-            displayMoneyMessage(winMessageTeamB);
+        if (moneyScoreTeamB < 100 && productsScoreTeamB < 40 && moneyScoreTeamA < 100 && productsScoreTeamA < 40) {
+            moneyScoreTeamB = moneyScoreTeamB + 5;
+            productsScoreTeamB = productsScoreTeamB + 1;
+            String moneyMessage = "€" + moneyScoreTeamB;
+            displayMoneyForTeamB(moneyMessage);
+            displayProductsForTeamB(productsScoreTeamB);
         }
-        if (productsScoreTeamB >= 40){
-            displayProductsMessage(winMessageTeamB);
+        if (moneyScoreTeamB >= 100) {
+            displayMoneyMessage(finalWinMessageTeamB);
+        }
+        if (productsScoreTeamB >= 40) {
+            displayProductsMessage(finalWinMessageTeamB);
         }
     }
 
@@ -253,11 +258,10 @@ public class MainActivity extends AppCompatActivity {
      * When pressing the "SCORE STATUS" button again, the texts are hidded (deleted)
      * this situation (show/hide text) is repetitive
      */
-    public void showStatus (View view)
-    {
+    public void showStatus(View view) {
         showScoreStatus = showScoreStatus + 1;
 
-        if((showScoreStatus % 2)==0) {
+        if ((showScoreStatus % 2) == 0) {
             String winMessageTeamA = "";
             String winMessageTeamB = "";
             String tieMessage = "";
@@ -271,9 +275,7 @@ public class MainActivity extends AppCompatActivity {
             displayProductsMessage(winProductsMessageTeamA);
             displayProductsMessage(winProductsMessageTeamB);
             displayProductsMessage(tieMessageProducts);
-        }
-
-        else {
+        } else {
 
             String winMessageTeamA = "Green Team\nraised more\nmoney!";
             String winMessageTeamB = "Blue Team\nraised\nmore money!";
@@ -304,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
      * resets all scores to 0
      * resets all display messages to ""
      */
-    public void resetScore (View view){
+    public void resetScore(View view) {
         moneyScoreTeamA = 0;
         productsScoreTeamA = 0;
         moneyScoreTeamB = 0;
@@ -319,9 +321,9 @@ public class MainActivity extends AppCompatActivity {
 
         String winMessageTeamA = "";
         String winMessageTeamB = "";
-        String tieMessage ="";
+        String tieMessage = "";
         String winProductsMessageTeamA = "";
-        String winProductsMessageTeamB =  "";
+        String winProductsMessageTeamB = "";
         String tieMessageProducts = "";
 
         displayMoneyMessage(winMessageTeamA);
@@ -382,7 +384,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Override the onSaveInstanceState method, this will write the variables values to the Bundle
     @Override
-    public void onSaveInstanceState(Bundle savedInstanceState){
+    public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putInt(MONEY_SCORE_TEAM_A, moneyScoreTeamA);
         savedInstanceState.putInt(MONEY_SCORE_TEAM_B, moneyScoreTeamB);
