@@ -1,5 +1,12 @@
 # DonationsForCharityScoreKeeper
 
+First class project using Java, part of Android Basics Nanodegree by Udacity, User Input chapter, where I learned:
+- linking XML with Java by adding button code
+- updating views
+- scoping variables
+- finding views by id
+- save instance state method
+
 This app was created in order to help an organization raise funds for charity during events through gamification.
 
 Rules of the game:
